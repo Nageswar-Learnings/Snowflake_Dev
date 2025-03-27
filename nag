@@ -1,0 +1,30 @@
+Hi, good evening,
+
+I previously worked with Cognizant Technology Solutions India Pvt. Ltd. as a Snowflake Developer and have over three years of experience in the field. During this time, I've worked on multiple data warehousing projects. Recently, I was involved with the Mortgage Client PennyMac, which deals with the production and servicing of mortgages.
+
+Currently, we are migrating an existing data warehouse, previously maintained in SQL Server, to Snowflake. As part of this migration, our team is ingesting data into a data lake maintained within AWS S3. The data lake consists of two layers: the Raw Layer and the Curated Layer.
+
+The source data is ingested into the raw layer, and we use a utility built in Python to split large files (ranging from 50MB to 500MB). Additionally, some applications are being converted from CHB format to Python format.
+
+The migration process consists of three main steps:
+
+Schema Migration: We generate DDLs for tables and views from SQL Server and convert them into Snowflake-compatible DDLs using our schema converter utility.
+
+Data Migration: Once the data is available in the data lake, we create data pipelines for full loads using the COPY command and delta loads using the MERGE statement and streams. We also implement Slowly Changing Dimension (SCD) Type 1 and Type 2 target tables.
+
+Code Migration: After the data is migrated, we begin the code migration process, including the creation of base and materialized views. The data from these views is then exposed for reporting in Power BI.
+
+For one of our servicing applications, we frequently receive files (every minute or two). For these, we set up Snowpipe using SQS notifications on top of AWS S3. As soon as a file is ingested into the S3 bucket, it triggers Snowpipe to load the data into Snowflake tables. We maintain two layers in Snowflake:
+
+Staging Database: Data is loaded into the staging tables, where we use streams to capture changes.
+
+Reporting (DW Database): After capturing changes, data is transferred to the target tables, maintaining SCD Type 1 logic.
+
+This entire process is scheduled in Snowflake. Once the data load is complete, we begin the code migration phase.
+
+I am also familiar with other key Snowflake features such as Zero Copy Data Sharing and Time Travel.
+
+I am always proactive, have a positive mindset, and am a dedicated worker. I am confident that I can contribute to the growth of your organization.
+
+That's all about me. Thank you.
+
